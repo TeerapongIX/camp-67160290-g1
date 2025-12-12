@@ -30,8 +30,10 @@
             <h1>File Default</h1>
             @yield('content')
         </div>
+
         @stack('scripts')
         
+
 
     </body>
 </html>

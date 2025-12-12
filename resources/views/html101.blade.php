@@ -7,7 +7,7 @@
         <table border="0">
             <tr>
                 <td style="width: 170px;"><b>ชื่อ</b></td>
-                <td><input type="text" name="firstname"></td>
+                <td><input type="text" name="firstname" ></td>
             </tr>
             <tr>
                 <td><b>สกุล</b></td>
@@ -158,8 +158,38 @@
 
 @push('scripts')
     <script>
-        console.log('Hello Word! Js')
-        console.error('Hello Error! Js')
-        console.warn('Hello Warning! Js')
+        let clickmMe = function() {
+            let fname = document.getElementsByName("firstname")
+            fname.value = "from Click Me"
+            console.log(fname.value);
+
+            if (fname.value === "") {
+                fname.classList.remove("is-valid")
+                fname.classList.add("is-valid")
+            }else {
+                fname.classList.remove("is-invalid")
+                fname.classList.add("is-valid")
+            }
+        }
+
+        let myfunc = (callback) => {
+            callback("in Callback")
+        }
+
+        CallMe = (param) => {
+            console.log(param)
+        }
+
+        myfunc(CallMe)
+
+            let myvar1 = 1
+            let myvar2 = "1"
+            myvar = parseInt(myvar2)
+
+            console.log(myvar2 + myvar1 + "\n\n\n\nทดสอบ");
+            console.log(1 == '1');
+
     </script>
+
+
 @endpush
