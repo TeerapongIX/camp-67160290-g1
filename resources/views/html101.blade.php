@@ -8,6 +8,12 @@
             <tr>
                 <td style="width: 170px;"><b>ชื่อ</b></td>
                 <td><input type="text" name="firstname" ></td>
+                <div class="valid-feedback">
+                    ถูกต้อง
+                </div>
+                <div class="invalid-feedback">
+                    กรุณาระบุชื่อ
+                </div>
             </tr>
             <tr>
                 <td><b>สกุล</b></td>
