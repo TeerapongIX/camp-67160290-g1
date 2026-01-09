@@ -3,15 +3,16 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Flight;
 
-class FlightController extends Controller
+class FlightsController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+        return view('flights.index');
     }
 
     /**
@@ -28,6 +29,15 @@ class FlightController extends Controller
     public function store(Request $request)
     {
         //
+        //use App\Models\Flight;
+        $flight = new Flight;
+        $flight->name = $request->input('name');
+        $flight->airline = $request->input('airline');
+        $flight->number_of_seats = $request->input('number_of_seats');
+        $flight->price = $request->input('price');
+        $flight->save();
+
+       // return redirect('/flights')
     }
 
     /**

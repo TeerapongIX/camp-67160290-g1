@@ -41,6 +41,19 @@
                 border: 2px solid #dc3545 !important;
                 background-color: #f8d7da;
             }
+
+                    .table {
+                width: 100%;
+                border-collapse: collapse; /* ทำให้เส้นขอบติดกัน */
+            }
+            .table th, .table td {
+                padding: 12px 8px; /* เพิ่มช่องว่างให้ดูไม่อึดอัด */
+                text-align: left;
+                border-bottom: 1px solid #9b9b9b; /* เส้นขีดด้านล่างของทุกช่อง */
+            }
+            .table thead th {
+                border-bottom: 2px solid #9b9b9b; /* เส้นใต้หัวข้อให้เข้มกว่านิดหน่อย */
+            }
         </style>
 
         @stack('styles')
