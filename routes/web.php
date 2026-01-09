@@ -14,3 +14,8 @@ use App\Http\Controllers\MyController;
 
 Route::get('/workshop', [MyController::class, 'index']);
 Route::post('/workshop/store', [MyController::class, 'store'])->name('workshop.store');
+
+
+
+Route::resource('/flights',App\Http\Controllers\FlightsContrller::class);
+
