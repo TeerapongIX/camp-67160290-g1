@@ -19,4 +19,6 @@ Route::post('/workshop/store', [MyController::class, 'store'])->name('workshop.s
 
 Route::resource('/flights',App\Http\Controllers\FlightsController::class);
 
+Route::resource('/pokedexs', App\Http\Controllers\PokedexController::class);
+
 
